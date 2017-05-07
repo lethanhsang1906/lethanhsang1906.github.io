@@ -1,33 +1,35 @@
 $(document).ready(function() {
-  // $('.navigation').affix({offset: {top: 150} });
+  var deviceWidth = $(document).width();
+  var offsetTop;
+  if (deviceWidth < 768) {
+    offsetTop = 60;
+  } else {
+    offsetTop = 80;
+  }
 
-  $('body').scrollspy({target: ".navbar", offset: 80});
+  $('body').scrollspy({target: ".navbar", offset: offsetTop});
   
-  // Add smooth scrolling on all links inside the navbar
   $("#myNavbar a, a.scroll-down-btn").on('click', function(event) {
-    // Make sure this.hash has a value before overriding default behavior
     if (this.hash !== "") {
-      // Prevent default anchor click behavior
       event.preventDefault();
-      // Store hash
       var hash = this.hash;
-      // Using jQuery's animate() method to add smooth page scroll
-      // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
       $('html, body').animate({
-        scrollTop: $(hash).offset().top - 80
+        scrollTop: $(hash).offset().top - offsetTop
       }, 800, function(){
-      // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });
-    } // End if
+    }
   });
 
   $('#myNavbar a').click(function() {
     var deviceWidth = $(document).width();
-    console.log(deviceWidth);
     if (deviceWidth < 768) {
-      $('#myNavbar').css('height', '1px');
+      $('#navbar-button').click();
     }
+  });
+
+  $('#navbar-button').click(function(){
+    $(this).toggleClass('open');
   });
 
   var mixer = mixitup('.portfolio .items-fr', {
