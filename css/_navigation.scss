@@ -8,7 +8,8 @@
   min-height: 80px;
   font-family: $robotoRegular;
   .navbar-brand {
-    padding: 25px 120px 25px 0;
+    // padding: 25px 120px 25px 0;
+    margin-right: 50px;
   }
   li {
     a {
@@ -36,6 +37,14 @@
   .navbar-toggle {
     span {
       background-color: #fff;
+    }
+  }
+}
+
+@media all and (max-width: 768px)  {
+  .navigation {
+    .navbar-collapse {
+      max-height: none;
     }
   }
 }
