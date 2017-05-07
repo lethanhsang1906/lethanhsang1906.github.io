@@ -22,6 +22,14 @@ $(document).ready(function() {
     } // End if
   });
 
+  $('#myNavbar a').click(function() {
+    var deviceWidth = $(document).width();
+    console.log(deviceWidth);
+    if (deviceWidth < 768) {
+      $('#myNavbar').css('height', '1px');
+    }
+  });
+
   var mixer = mixitup('.portfolio .items-fr', {
     selectors: {
       target: '.item'
