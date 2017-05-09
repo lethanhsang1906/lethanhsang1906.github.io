@@ -22,7 +22,8 @@
   .contact-block {
    .info-fr {
       .info {
-        &:last-child {
+        &:last-child,
+        &:nth-child(2) {
           margin-top: 30px;
         }
       }

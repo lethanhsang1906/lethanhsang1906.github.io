@@ -22,6 +22,10 @@
       &:focus {
         outline: none;
       }
+      &:hover {
+        background-color: #fd0000;
+        color: #fff;
+      }
     }
     .behance-link {
       position: absolute;
@@ -43,9 +47,11 @@
           left: 0;
           bottom: 0;
           width: 100%;
-          background: rgba(17,18,17,0.2);
+          background: rgba(17,18,17,0.65);
           .text {
             margin-top: 10px;
+            font-family: $brandonBold;
+            text-transform: uppercase;
           }
           .type {
             color: #fd2626;

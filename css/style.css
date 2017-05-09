@@ -198,7 +198,11 @@ body {
       top: 3px;
       margin-left: 5px; }
     .intro-block .behance-btn:hover {
-      text-decoration: none; }
+      text-decoration: none;
+      background-color: #e10000; }
+    .intro-block .behance-btn:active {
+      text-decoration: none;
+      background-color: #e10000; }
   .intro-block .scroll-down-btn {
     margin-top: 160px;
     display: inline-block; }
@@ -270,6 +274,11 @@ body {
       margin-left: 10px;
       position: relative;
       bottom: 5px; }
+    .about-block .file-download-btn:hover {
+      background-color: #e10000; }
+    .about-block .file-download-btn:active {
+      color: #fff;
+      background-color: #e10000; }
 
 @media all and (max-width: 1024px) {
   .about-block .ability {
@@ -437,6 +446,9 @@ body {
         color: #fff; }
       .portfolio-block .button-fr button:focus {
         outline: none; }
+      .portfolio-block .button-fr button:hover {
+        background-color: #fd0000;
+        color: #fff; }
     .portfolio-block .button-fr .behance-link {
       position: absolute;
       right: 0;
@@ -454,9 +466,11 @@ body {
         left: 0;
         bottom: 0;
         width: 100%;
-        background: rgba(17, 18, 17, 0.2); }
+        background: rgba(17, 18, 17, 0.65); }
         .portfolio-block .items-fr .item a .caption-fr .text {
-          margin-top: 10px; }
+          margin-top: 10px;
+          font-family: "Brandon-Bold";
+          text-transform: uppercase; }
         .portfolio-block .items-fr .item a .caption-fr .type {
           color: #fd2626; }
 
@@ -489,7 +503,7 @@ body {
     color: #fff; }
 
 @media all and (max-width: 768px) {
-  .contact-block .info-fr .info:last-child {
+  .contact-block .info-fr .info:last-child, .contact-block .info-fr .info:nth-child(2) {
     margin-top: 30px; }
   .contact-block footer {
     padding: 30px 0; } }

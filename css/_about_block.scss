@@ -37,6 +37,13 @@
       position: relative;
       bottom: 5px;
     }
+    &:hover {
+      background-color: #e10000;
+    }
+    &:active {
+      color: #fff;
+      background-color: #e10000;
+    }
   }
 }
 
